@@ -9,6 +9,54 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="226*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="titleTextBlock" HorizontalAlignment="Center" Height="30" Margin="113,10,122,0" TextWrapping="Wrap" Text="BMI Calculator" VerticalAlignment="Top" Width="165" FontSize="24">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.616"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="weightPromptTextBlock" HorizontalAlignment="Center" Margin="10,10,192,31.333" Grid.Row="1" TextWrapping="Wrap" Text="Enter your weight:" VerticalAlignment="Center"  Height="37" Width="198" FontSize="18"/>
+        <TextBox x:Name="weightTextBox" Margin="227,10,10,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Center" Width="163" InputScope="Number" Height="39" FontFamily="Global User Interface"/>
+        <TextBlock x:Name="heightPromptTextBlock" HorizontalAlignment="Center" Margin="10,18.667,225,0" Grid.Row="2" TextWrapping="Wrap" Text="Enter your height:" VerticalAlignment="Top" Height="40" Width="165" FontSize="18"/>
+        <TextBox x:Name="heightTextBox" HorizontalAlignment="Left" Margin="227,9.667,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" Height="39" InputScope="Number"/>
+        <Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Left" Margin="140,10.5,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="1.539,0.2" Height="58" Width="109" Click="calculateButton_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="9.697,8.975,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Height="111.18" Width="116.401" FontSize="16" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="0.878"/>
+            </TextBlock.RenderTransform>
+        	<Run Text="BMI Values:"/>
+        	<LineBreak/>
+        	<Run Text="Underweight:"/>
+        	<LineBreak/>
+        	<Run Text="Normal:"/>
+        	<LineBreak/>
+        	<Run Text="Overweight:"/>
+        	<LineBreak/>
+        	<Run Text="Obese:"/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="113,29.667,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Height="143" Width="165" FontSize="16">
+        	<Run Text="less than 18.5"/>
+        	<LineBreak/>
+        	<Run Text="between 18.5 and 24.9"/>
+        	<LineBreak/>
+        	<Run Text="between 25 and 29.9"/>
+        	<LineBreak/>
+        	<Run Text="30 or greater"/>
+        </TextBlock>
+        <TextBlock x:Name="bmiTextBlock" HorizontalAlignment="Left" Margin="10,117.667,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="99" Width="380" FontSize="22"/>
+        <RadioButton x:Name="englishRadioButton" Content="English" HorizontalAlignment="Left" Margin="10,13.667,0,-6.5" Grid.Row="3" VerticalAlignment="Top" Height="57" Width="168"/>
+        <RadioButton x:Name="metricRadioButton" Content="Metric" HorizontalAlignment="Left" Margin="222,4.667,0,0" Grid.Row="3" VerticalAlignment="Top" Height="57" Width="168"/>
 
     </Grid>
 </Page>
